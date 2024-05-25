@@ -16,18 +16,23 @@ img{
     border: none;
     border-radius: 3pc;
     width: 9pc;
+    height: 2pc;
+
 }
 #excluir{
     background-color: rgb(190, 10, 10);
     border: none;
     border-radius: 3pc;
     width: 9pc;
+    height: 2pc;
+
 }
 #entrou{
     background-color: rgb(8, 175, 241);
     border: none;
     border-radius: 3pc;
     width: 9pc;
+    height: 2pc;
 }
 
 #bts{
