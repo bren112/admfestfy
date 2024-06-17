@@ -33,7 +33,7 @@ const Index = () => {
     <div className='home'>
       <h1 id='title'>GERENCIE SUA FESTA POR AQUI!</h1>
       <img src={img} alt="" srcset="" />
-      <h2>Total Arrecadado Arraial: <span id='valorTotal'>R$ {totalAmount.toFixed(2)}</span></h2>
+      <p>Total Arrecadado Arraial: <span id='valorTotal'>R$ {totalAmount.toFixed(2)}</span></p>
     </div>
   );
 }
