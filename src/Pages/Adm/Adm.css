@@ -57,3 +57,9 @@ img{
     }
 
 }
+input{
+    border-radius: 4pc;
+    height: 2pc;
+    width: 11pc;
+    border: solid 1px rgb(8, 175, 241);
+}
