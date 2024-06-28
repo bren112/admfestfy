@@ -47,6 +47,16 @@ const Aprovados = () => {
     }
   };
 
+  const filteredAprovados = aprovados.filter((aprovado) => {
+    const searchTermLowerCase = searchTerm.toLowerCase();
+    const nomeLowerCase = aprovado.nome.toLowerCase();
+    const idString = aprovado.id.toString();
+    return (
+      nomeLowerCase.includes(searchTermLowerCase) ||
+      idString.includes(searchTermLowerCase)
+    );
+  });
+
   return (
     <div>
       <h2 id='title'>Aprovados</h2>
@@ -70,10 +80,10 @@ const Aprovados = () => {
           </tr>
         </thead>
         <tbody>
-          {aprovados.map((aprovado, index) => {
+          {filteredAprovados.map((aprovado, index) => {
             const nomeLowerCase = aprovado.nome.toLowerCase();
             const searchTermLowerCase = searchTerm.toLowerCase();
-            const highlight = searchTerm && nomeLowerCase.includes(searchTermLowerCase) ? 'yellow' : 'inherit';
+            const highlight = searchTerm && (nomeLowerCase.includes(searchTermLowerCase) || aprovado.id.toString().includes(searchTermLowerCase)) ? 'yellow' : 'inherit';
 
             return (
               <tr key={aprovado.id} style={{ backgroundColor: highlight }}>
